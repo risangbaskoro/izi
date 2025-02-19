@@ -1,0 +1,23 @@
+name: Release
+on:
+  push:
+    branch:
+      - main
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
+        with:
+          rclone_config: ${{ secrets.RCLONE_CONFIG }}
+        # uses: milliewalky/setup-rclone@v1
+      - name: Sync
+        run: rclone copy . sh:sh --include "*.sh" --include "*.md"
