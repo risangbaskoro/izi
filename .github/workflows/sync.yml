@@ -1,4 +1,4 @@
-name: Release
+name: Sync
 on:
   push:
     branch:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    name: Release
+    name: Sync
     runs-on: ubuntu-latest
     environment: release
     steps:
