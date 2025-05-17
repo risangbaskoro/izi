@@ -1,5 +1,5 @@
 Example:
 
 ```shell
-bash <(curl https://sh.risangbaskoro.com/sh/install-nvim.sh)
+bash <(curl https://sh.risangbaskoro.com/dotfiles)
 ```
