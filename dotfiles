@@ -7,4 +7,4 @@ DOTFILES_URL="https://github.com/risangbaskoro/dotfiles.git"
 [[ ! -f "${HOME}/.zshrc" ]] || rm "${HOME}/.zshrc"
 
 [[ -d "$DOTFILES_DIR" ]] || git clone "$DOTFILES_URL" "$DOTFILES_DIR"
-[[ ! -d "$DOTFILES_DIR" ]] || bash "$DOTFILES_DIR/install.sh"
+[[ ! -d "$DOTFILES_DIR" ]] || bash "$DOTFILES_DIR/install"
